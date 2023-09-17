@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+   <meta charset="utf-8">
+   <title> 수강생 이름 </title>
+</head>
+<body>
+   <form method="get">
+      <fieldset>
+         <legend>Photo Details</legend>
+         <table style="width: 100%;">
+            <tfoot>
+               <tr>
+                  <td>
+                     <input type="submit"/>
+                     <input type="button" value="Clear Form"/>
+                  </td>
+               </tr>
+            </tfoot>
+            <tbody>
+               <tr>
+                  <td colspan="2">
+                     <p>Title</p>
+                     <input style="width: 90%;" type="text" name="title" />
+                     <p>Description</p>
+                     <textarea style="width: 70%;">
+                     </textarea>
+                  </td>
+            </tr>
+            <tr>
+               <td>
+                  <label>Continent</label></br>
+                  <select name="continent">
+                     <option>Choose continent</option>
+                     <option>Africa</option>
+                     <option>Asia</option>
+                     <option>Europe</option>
+                     <option>North America</option>
+                     <option>South America</option>
+                  </select></br>
+                  <p>Country</p>
+                  <select name="country">
+                     <option>Choose country</option>
+                     <option>Canada</option>
+                     <option>Mexico</option>
+                     <option>United States</option>
+                  </select>
+                  <p>City</p>
+                  <input style="width: 90%;" type="text" name="city" list="canada" />
+                  <datalist id="canada">
+                     <option>Calgary</option>
+                     <option>Montreal</option>
+                     <option>Toronto</option>
+                     <option>Vancouver</option>
+                  </datalist>
+               </td>
+               <td>
+                  <p>Copyright?</p>
+                  <input type="radio" value="1">All rights reserved</br>
+                  <input type="radio" value="2">Creative Commons</br>
+                  <p>Creative Commons Types</p>
+                  <input type="checkbox">Attribution</br>
+                  <input type="checkbox">Noncommercial</br>
+                  <input type="checkbox">No Derivative Works</br>
+                  <input type="checkbox">Share Alike</br>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <label>I accept the software license</label>
+                  <input type="checkbox">
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <label>Rate this photo:</label></br>
+                  <input type="number" min="1" max="5"></br>
+                  <label>Color Collection:</label></br>
+                  <input type="color"
+               </td>
+               <td>
+                  <label>Date Taken:</label></br>
+                  <input type="date"></br>
+                  <label>Time Taken:</label></br>
+                  <input type="time"></br>
+               </td>
+            </tr>
+            </tbody>
+            
+            
+         </table>
+      </fieldset>
+   </form>
+</body>
+</html>
