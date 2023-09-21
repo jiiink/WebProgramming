@@ -1,0 +1,193 @@
+/*goal 1 general text formetting */
+
+h1,
+h2,
+h3,
+nav,
+footer {
+   font-family: 'Courier New', Courier, monospace;
+   background-color: rgb(48, 80, 81);
+}
+
+body {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: large;
+   background-color: rgb(0, 47, 47);
+}
+
+h1 {
+   color: white;
+   font-size:
+      /* older browsers */
+      font-size:
+}
+
+h2 {
+   color: white;
+   font-size:
+      font-size:
+}
+
+h3 {
+   background-color: white;
+   color: black;
+   font-size:
+      font-size: border-bottom: margin:
+}
+
+p {
+   font-size:
+      font-size:
+}
+
+nav {
+   background-color: gray;
+   font-size:
+      font-size:
+}
+
+/* goal 2 link styling */
+
+a:link {
+   color: aqua;
+   font-weight:
+      color:
+}
+
+a:visited {
+   color: purple;
+}
+
+a:hover {
+   background-color: green;
+}
+
+
+/* goal 3 header and navigation */
+
+header,
+footer {
+   margin: 1em 4em 1em 4em;
+   /* padding: 0.5em; */
+   padding-left: 0%;
+   padding-right: 0%;
+
+   color: white;
+      background-color: margin:
+}
+
+hgroup {
+   padding:
+}
+
+nav {
+   background-color:
+}
+
+nav ul li {
+   display: inline;
+   list-style:
+   
+}
+
+nav {
+   padding:
+}
+
+nav a {
+   padding:
+}
+
+/* article styling */
+article {
+   background-color: white;
+   margin: 1em 4em 1em 4em;
+   padding: 0.5em;
+}
+
+.byline,
+figcaption {
+   color: #728B96;
+   font-style: italic;
+   font-size: 14px;
+   font-size: .875rem;
+}
+
+p {
+   margin: 0 0 0.5em 0;
+}
+
+/* figure styling */
+
+figure {
+   margin: 0.5em 0 0.5em 0;
+}
+
+figure img {
+   padding: 0.25em;
+   border: solid 1px #999999;
+}
+
+figure div {
+   margin: 0.25em 0 2em 0;
+   padding: 0.5em;
+   width: 485px;
+   background-color: #9FAAB0;
+   border: solid 1px #999999;
+   border-radius: 4px;
+   -webkit-border-radius: 4px;
+   background-image: url(images/gray-gradient.gif);
+   background-repeat: repeat-x;
+}
+
+figure div p {
+   font-size: 70%;
+}
+
+figure div img {
+   padding: 0;
+   border: 0;
+}
+
+figure div p {
+   margin: 0;
+}
+
+figcaption {
+   margin-bottom: 0.5em;
+}
+
+span.share {
+   display: inline-block;
+   background: url(images/glyphicons-halflings.png) no-repeat;
+   width: 14px;
+   height: 14px;
+   background-position: -120px -72px;
+   padding-right: 5px;
+}
+
+/* review styling */
+
+#reviews {
+   margin-top: 1em;
+}
+
+#reviews div {
+   border-bottom: dotted 1pt #999999;
+   margin-bottom: 1.25em;
+}
+
+#reviews p {
+   margin: 0;
+}
+
+
+/* footer styling */
+footer {
+   padding: 0.5em;
+}
+
+footer p {
+   font-size: 14px;
+   font-size: .875rem;
+}
