@@ -1,0 +1,117 @@
+/*don't edit this area */
+h1, h2, h3, p, body, div {
+    font-family: Tahoma, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;  
+}
+
+h1  {  
+    font-size: 1.8em; 
+    margin: 0.25em 0 0.25em 0;
+}
+h2  {   
+    font-size: 1.2em;    
+    margin: 0.5em 0 0.25em 0;
+}
+p, body {
+    font-size: 0.9em;
+} 
+p {
+    margin-bottom: 1em;
+}  
+body {
+    background-color: white; 
+}
+/*don't edit this area*/
+
+
+/* Goal 1: start */
+/* you cannot insert, modify, or delete the selectors */
+fieldset {
+    margin: 5em 5em 5em 5em; /* don't change the margin */
+
+}
+
+table {
+
+}
+
+table tbody td{
+
+}
+
+legend {
+
+}
+
+form p {
+
+}
+
+.box {
+
+}
+
+.rectangle {
+
+}
+
+.centered {
+
+}
+
+.rounded {
+    
+}
+
+/* Goal 1: end */
+
+
+/* Goal 2: start */
+article {
+    background-color: #F5F5F5;
+    margin: 5em 5em 5em 5em;
+    padding: 1em 20px;
+}
+
+figure {    
+    float: left;
+    padding: 0 1em ;
+    position: relative;
+}
+
+figcaption {
+    width: 140px;
+    background-color: black;
+    color:white;
+    opacity:0.7;
+    height: 20px;
+    padding: 5px;
+    position: absolute;
+    top: 120px;
+}
+
+.overlayed {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.entry {
+    border-top: 1pt solid #ff8800;
+}
+
+.right {
+    float: right;   
+}
+
+.linkbutton {
+    margin-top: 2em;
+    background-color: #ff8800;
+    display: block;
+    padding: 10px 10px;
+    color: white;
+    text-decoration: none; 
+    font-size: 0.75em;   
+}
+/* Goal 2: end */
