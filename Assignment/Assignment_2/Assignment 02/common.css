@@ -29,39 +29,65 @@ body {
 /* you cannot insert, modify, or delete the selectors */
 fieldset {
     margin: 5em 5em 5em 5em; /* don't change the margin */
-
+    padding: 0.5em;
 }
 
 table {
-
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5em;
 }
 
 table tbody td{
-
+    margin: 0.1em;
+    padding: 0.1em;
+    width: 60%;
 }
 
 legend {
-
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.1em 21em;
+    background-color: rgb(223, 236, 243);
+    font-weight: bold;
 }
 
 form p {
-
+    margin: 0.1em;
+    padding: 0.1em;
 }
 
 .box {
-
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    border-style: solid;
+    border-color: rgb(176, 227, 255);
+    border-width: 0.1rem;
 }
 
 .rectangle {
-
+    margin: 0.1em;
+    padding: 0.3em;
+    background-color: rgb(223, 236, 243);
 }
 
 .centered {
-
+    margin: 0.1em;
+    padding: 0.1em;
+    text-align: center;
 }
 
 .rounded {
-    
+    margin: 0.5em 0.1em;
+    padding: 0.1em;
+    background-color: #90A0C2;
+    color: white;
+    width: 6em;
+    height: 2em;
+    border-radius: 0.5em;
+    border-width: 0.1em;
 }
 
 /* Goal 1: end */
@@ -72,6 +98,8 @@ article {
     background-color: #F5F5F5;
     margin: 5em 5em 5em 5em;
     padding: 1em 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 figure {    
