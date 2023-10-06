@@ -1,7 +1,7 @@
 function highlight() {
 	// Write source code
-	// document.getElementById("content").innerHTML.
-	document.getElementById("content").style.background = 'yellow';
+	// document.getElementById("content").style.background = 'yellow';
+	document.getElementById("content").style.backgroundColor = "yellow";
 }
 
 function off() {

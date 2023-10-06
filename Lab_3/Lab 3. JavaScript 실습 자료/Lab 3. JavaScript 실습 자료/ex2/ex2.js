@@ -1,24 +1,22 @@
 function login() {
     const password = "Pass";
-    
-    let input = prompt("Input the password", "");
+    let user_password = prompt("Input the password","");
 
-    while (input != password) {
+    while (user_password != password) {
         alert("Wrong");
-
-        input = prompt("Input the password", "");
+        user_password = prompt("Input the password", "");
     }
-
     alert("Pass");
 }
 
 function initial() {
-    const holiday = ["Mon", "Wed", "Fri", "Sat", "Sun"];
-    const work = ["Tue", "Thu"];
-	let day = prompt("Input from Mon to Sun");
-            if (day in holiday) {
-                
-            }
+    let user_input = prompt("Input from Mon to Sun");
+    
+    if (user_input == "Tue" || user_input == "Thu") {
+        document.write(user_input + " Go work");
+    } else {
+        document.write("Holiday!");
+    }
 }
 
 

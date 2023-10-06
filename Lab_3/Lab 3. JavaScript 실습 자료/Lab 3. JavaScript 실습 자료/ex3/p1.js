@@ -1,42 +1,32 @@
 function isBlank(inputField) {
     if (inputField.type == "checkbox") {
         //write your code
-        // alert("blank check");
-        // alert(inputField.checked);
-        // return !inputField.cheked;
-        if (inputField.checked) {
-            return false;
-        } else {
-            return true;
-        }
+        return !inputField.checked;
     }
 
     if (inputField.type == "text") {
         //write your code
-        if (inputField.value == "") {
+        if (inputField.value == "" ) {
             return true;
         } else {
             return false;
         }
-        
-        // return !inputField.empty;
     }
+    // if (inputField.type == "number") {
 
-
-
+    // }
 }
 
 function makeRed(inputField) {
-//write your code
+    //write your code
     inputField.style.backgroundColor = "red";
     inputField.parentNode.style.backgroundColor = "red";
-    inputField.parentNode.style.color = "white";
+    inputField.parentNode.style.color = "#FFFFFF";
 }
 
 function makeClean(inputField) {
-//write your code
+    //write your code
     // inputField.style.backgroundColor = "white";
-    inputField.style.backgroundColor = "white";
     inputField.parentNode.style.backgroundColor = "white";
     inputField.parentNode.style.color = "black";
 }
