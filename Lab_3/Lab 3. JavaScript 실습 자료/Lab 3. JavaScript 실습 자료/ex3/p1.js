@@ -12,9 +12,6 @@ function isBlank(inputField) {
             return false;
         }
     }
-    // if (inputField.type == "number") {
-
-    // }
 }
 
 function makeRed(inputField) {
@@ -26,7 +23,6 @@ function makeRed(inputField) {
 
 function makeClean(inputField) {
     //write your code
-    // inputField.style.backgroundColor = "white";
     inputField.parentNode.style.backgroundColor = "white";
     inputField.parentNode.style.color = "black";
 }
