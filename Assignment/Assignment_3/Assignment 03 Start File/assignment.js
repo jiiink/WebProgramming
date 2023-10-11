@@ -1,30 +1,40 @@
-window.onload = function(){
-    //Edit here
+window.onload = function () {
     let images = document.querySelectorAll(".artThumb");
-
-    // for (img of images) {
-    //     img.addEventListener("mouseover", largeImg());
-    //     img.addEventListener("mouseout", hideImg());
-    // }
-    // alert(images.length);
     for (let i=0; i<images.length; i++) {
-        // images[i].addEventListener('mouseover', largeImg(this));
-        // images[i].addEventListener('mouseout', hideImg(this));
         images[i].addEventListener('mouseover', function () {
-            largeImg(this); // Pass the current image element to largeImg function
+            createLargerImage(this);
         });
         images[i].addEventListener('mouseout', function () {
-            hideImg(this); // Pass the current image element to hideImg function
+            hideLargerImage();
         });
     }
 }
 
-function largeImg(img) {
-    // alert(img.src);
-    img.src = img.src.replace("thumbs/", "");
+let largerImage;
+
+function createLargerImage(img) {
+    largerImage = document.createElement('span');
+    document.body.appendChild(largerImage);
+    let largerImg = document.createElement('img');
+    largerImg.src = img.src.replace("thumbs/", "");
+    largerImage.appendChild(largerImg);
+
+    styleLargerImage(img);
 }
 
-function hideImg(img) {
-    img.src = img.src.replace("art/", "art/thumbs/");
+function styleLargerImage(img) {
+    largerImage.style.display = 'block';
+    largerImage.style.backgroundColor = 'white';
+    largerImage.style.position = 'absolute';
+    largerImage.style.border = 'solid';
+    largerImage.style.margin = '10px 10px 10px 10px';
+    largerImage.style.padding = '10px 10px 10px 10px';
+    let rect = img.getBoundingClientRect();
+    largerImage.style.top = rect.top + 'px';
+    largerImage.style.left = rect.right + 'px';
 }
 
+function hideLargerImage() {
+    largerImage.innerHTML = '';
+    largerImage.style.display = 'none';
+}
