@@ -16,6 +16,6 @@ function updateZ() {
 	displayValues();
 }
 
-setInterval(updateX, 1000);
-setInterval(updateY, 2000);
-setInterval(updateZ, 4000);
+setInterval(updateX, 250);
+setInterval(updateY, 500);
+setInterval(updateZ, 1000);
