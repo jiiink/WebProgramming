@@ -9,5 +9,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(app.get("port"), () => {
-    console.log("connecting to", app.get("port"));
-})
+    console.log(app.get("port"), "번 포트 연결 중");
+});

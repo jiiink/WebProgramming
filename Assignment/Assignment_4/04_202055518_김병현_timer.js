@@ -5,7 +5,7 @@ const rl = readline.createInterface({
 });
 
     // 2 seconds later
-let question = "Web";
+let question = "웹프로그래밍";
 setTimeout(() => {
     console.log(question);
     rl.on("line", (answer) => {
@@ -16,15 +16,15 @@ setTimeout(() => {
 }, 2000);
 
 const timer = setTimeout(() => { // 5 seconds later
-    console.log("Time's up! You didn't input anything.");
+    console.log("시간 초과");
     rl.close();
 }, 7000); 
       
 
 function result(q, a) {
     if (q === a) {
-        console.log("Correct");
+        console.log("성공");
     } else {
-        console.log("Wrong");
+        console.log("실패");
     }
 }
