@@ -1,13 +1,13 @@
 {
-  "name": "nodebird",
-  "version": "0.0.1",
-  "description": "?ùµ?ä§?îÑ?†à?ä§Î°? ÎßåÎìú?äî SNS ?ÑúÎπÑÏä§",
+  "name": "node-auction",
+  "version": "1.0.0",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app"
   },
-  "author": "ZeroCho",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "cookie-parser": "^1.4.6",
@@ -15,17 +15,18 @@
     "express": "^4.18.2",
     "express-session": "^1.17.3",
     "morgan": "^1.10.0",
-    "multer": "^1.4.4",
-    "mysql2": "^2.2.5",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.6.5",
     "nunjucks": "^3.2.4",
-    "passport": "^0.6.0",
-    "passport-kakao": "^1.0.1",
+    "passport": "^0.7.0",
     "passport-local": "^1.0.0",
-    "sequelize": "^6.3.5",
-    "sequelize-cli": "^6.2.0"
+    "see": "^0.0.0",
+    "sequelize": "^6.35.1",
+    "sequelize-cli": "^6.6.2",
+    "socket.io": "^4.7.2",
+    "sse": "^0.0.8"
   },
   "devDependencies": {
-    "nodemon": "^2.0.22"
+    "nodemon": "^3.0.2"
   }
 }
-
