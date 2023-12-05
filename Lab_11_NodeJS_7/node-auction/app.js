@@ -12,6 +12,8 @@ const indexRouter = require('./routes/index');
 const authRouter = require('./routes/auth');
 const { sequelize } = require('./models');
 const passportConfig = require('./passport');
+const sse = require('./sse');
+const webSocket = require('./socket');
 
 const app = express();
 passportConfig();
@@ -23,7 +25,7 @@ nunjucks.configure('views', {
 });
 sequelize.sync({ force: false })
   .then(() => {
-    console.log('Îç∞Ïù¥ÌÑ∞Î≤†Ïù¥Ïä§ Ïó∞Í≤∞ ÏÑ±Í≥µ');
+    console.log('?ç∞?ù¥?Ñ∞Î≤†Ïù¥?ä§ ?ó∞Í≤? ?Ñ±Í≥?');
   })
   .catch((err) => {
     console.error(err);
@@ -53,7 +55,7 @@ app.use('/', indexRouter);
 app.use('/auth', authRouter);
 
 app.use((req, res, next) => {
-  const error =  new Error(`${req.method} ${req.url} ÎùºÏö∞ÌÑ∞Í∞Ä ÏóÜÏäµÎãàÎã§.`);
+  const error =  new Error(`${req.method} ${req.url} ?ùº?ö∞?Ñ∞Í∞? ?óÜ?äµ?ãà?ã§.`);
   error.status = 404;
   next(error);
 });
@@ -65,6 +67,9 @@ app.use((err, req, res, next) => {
   res.render('error');
 });
 
-app.listen(app.get('port'), () => {
-  console.log(app.get('port'), 'Î≤à Ìè¨Ìä∏ÏóêÏÑú ÎåÄÍ∏∞Ï§ë');
+const server = app.listen(app.get('port'), () => {
+  console.log(app.get('port'), 'Î≤? ?è¨?ä∏?óê?Ñú ???Í∏∞Ï§ë');
 });
+
+webSocket(server, app);
+sse(server);

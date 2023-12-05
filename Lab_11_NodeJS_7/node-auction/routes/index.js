@@ -5,7 +5,8 @@ const fs = require('fs');
 
 
 const { isLoggedIn, isNotLoggedIn } = require('../middlewares');
-const { renderMain, renderJoin, renderGood, createGood } = require('../controllers');
+const { renderMain, renderJoin, renderGood, createGood, renderAuction, bid } = require('../controllers');
+const { render } = require('nunjucks');
 
 const router = express.Router();
 
@@ -23,7 +24,7 @@ router.get('/good', isLoggedIn, renderGood);
 try {
   fs.readdirSync('uploads');
 } catch (error) {
-  console.error('uploads í´ë”ê°€ ì—†ì–´ uploads í´ë”ë¥¼ ìƒì„±í•©ë‹ˆë‹¤.');
+  console.error('uploads ?´?”ê°? ?—†?–´ uploads ?´?”ë¥? ?ƒ?„±?•©?‹ˆ?‹¤.');
   fs.mkdirSync('uploads');
 }
 const upload = multer({
@@ -39,5 +40,9 @@ const upload = multer({
   limits: { fileSize: 5 * 1024 * 1024 },
 });
 router.post('/good', isLoggedIn, upload.single('img'), createGood);
+
+router.get('/good/:id', isLoggedIn, renderAuction);
+
+router.post('/good/:id/bid', isLoggedIn, bid);
 
 module.exports = router;
