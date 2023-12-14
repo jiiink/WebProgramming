@@ -122,8 +122,17 @@ exports.bid = async (req, res, next) => {
       include: { model: Auction },
       order: [[{ model: Auction }, 'bid', 'DESC']],
     });
+    const lastAuction = await Auction.findOne({
+      order: [['id', 'DESC']],
+    });
+    if (req.user.id === lastAuction.UserId) {
+      return res.status(403).send("두번 연속 입찰 할 수 없습니다.");
+    }
     if (!good) {
       return res.status(404).send('해당 상품은 존재하지 않습니다.');
+    }
+    if (bid > req.user.money) {
+      return res.status(403).send("입찰 금액이 보유 자산보다 큽니다.");
     }
     if (good.price >= bid) {
       return res.status(403).send('시작 가격보다 높게 입찰해야 합니다.');
