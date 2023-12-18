@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const url = require('url');
 const { Domain, User, Post, Hashtag } = require('../models');
-const { follow } = require('../nodebird/controllers/user');
+const { follow } = require('../../nodebird/controllers/user.js');
 const { Sequelize } = require('sequelize');
 const { premiumApiLimiter, apiLimiter } = require('../middlewares');
 
